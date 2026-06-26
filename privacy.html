@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — SoberMate</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1a2330; --muted:#5b6b7d; --accent:#0A4FA6; --line:#e2e8f0; }
+  * { box-sizing:border-box; }
+  body { font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--fg);
+         background:var(--bg); max-width:760px; margin:0 auto; padding:24px 20px 64px; line-height:1.62; }
+  header { display:flex; align-items:center; gap:12px; margin-bottom:4px; }
+  header .mark { line-height:0; display:inline-flex; }
+  h1 { font-size:24px; margin:0; }
+  .updated { color:var(--muted); font-size:13px; margin:2px 0 18px; }
+  .langs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+  .langs button { border:1px solid var(--line); background:#f8fafc; color:var(--fg); border-radius:8px;
+                  padding:7px 12px; font-size:14px; cursor:pointer; }
+  .langs button[aria-selected="true"] { background:var(--accent); color:#fff; border-color:var(--accent); }
+  article { display:none; }
+  article.active { display:block; }
+  h2 { font-size:17px; margin:26px 0 6px; }
+  p, li { font-size:15px; }
+  a { color:var(--accent); }
+  .note { background:#f1f5f9; border:1px solid var(--line); border-radius:10px; padding:12px 14px; font-size:14px; }
+  footer { margin-top:36px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<header><span class="mark" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="shield" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5CC8F5"/><stop offset="1" stop-color="#0A4FA6"/></linearGradient><clipPath id="shieldClip"><path d="M50 18 L76 27 C78 28 79 30 79 33 L79 52 C79 68 66 80 50 86 C34 80 21 68 21 52 L21 33 C21 30 22 28 24 27 Z"/></clipPath></defs><path d="M50 18 L76 27 C78 28 79 30 79 33 L79 52 C79 68 66 80 50 86 C34 80 21 68 21 52 L21 33 C21 30 22 28 24 27 Z" fill="url(#shield)"/><g clip-path="url(#shieldClip)"><path d="M21 60 Q35 54 50 60 T79 60 L79 90 L21 90 Z" fill="#34D6E0" opacity="0.92"/></g><path d="M50 30 C56 40 59 45 59 49 A9 9 0 1 1 41 49 C41 45 44 40 50 30 Z" fill="#FFFFFF" opacity="0.95"/></svg></span><h1>SoberMate</h1></header>
+<div class="langs" role="tablist" aria-label="Langue / Language">
+  <button data-lang="fr" role="tab">Français</button>
+  <button data-lang="en" role="tab">English</button>
+  <button data-lang="es" role="tab">Español</button>
+  <button data-lang="zh" role="tab">中文</button>
+</div>
+
+<!-- ─────────────── FRANÇAIS ─────────────── -->
+<article data-lang="fr">
+  <h1>Politique de confidentialité</h1>
+  <p class="updated">Dernière mise à jour : 23 juin 2026</p>
+
+  <h2>1. Responsable du traitement</h2>
+  <p>L'application SoberMate est éditée par <strong>Arnaud Meigné, éditeur indépendant</strong>. Pour toute question relative à tes données : <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>.</p>
+
+  <h2>2. Principe : tes données restent sur ton téléphone</h2>
+  <p>SoberMate est conçue pour fonctionner localement. Ton profil (prénom, poids, sexe, adresse de domicile, contact de confiance), ton historique de verres et de soirées, ainsi que tes réglages sont <strong>stockés uniquement sur ton appareil</strong> et ne sont <strong>jamais</strong> envoyés à nos serveurs.</p>
+
+  <h2>3. Données partagées en « mode groupe » (optionnel)</h2>
+  <p>Lorsque tu crées ou rejoins un groupe de soirée, et uniquement pendant ce temps, les informations suivantes sont synchronisées via notre hébergeur Supabase pour être visibles des membres de ton groupe : <strong>ton prénom, ton alcoolémie estimée, ta position GPS</strong> (si tu actives le partage) et ton <strong>statut « bien rentré »</strong>.</p>
+  <ul>
+    <li><em>Finalité :</em> sécurité collective de la soirée (veiller les uns sur les autres).</li>
+    <li><em>Base légale :</em> ton consentement (tu choisis de rejoindre un groupe et d'activer la localisation).</li>
+    <li><em>Conservation :</em> ces données sont <strong>supprimées à la clôture de la soirée</strong>, et au plus tard automatiquement après 48 heures.</li>
+  </ul>
+
+  <h2>4. Statistiques d'usage anonymes</h2>
+  <p>Pour mesurer l'adoption de l'application, nous enregistrons un <strong>identifiant anonyme</strong> (non rattaché à ton identité) et des dates d'utilisation. Aucune donnée personnelle n'y est associée. Tu peux <strong>désactiver</strong> ce suivi à tout moment dans Réglages → Confidentialité.</p>
+
+  <h2>5. Autorisations de l'appareil</h2>
+  <ul>
+    <li><strong>Localisation :</strong> météo (qui affine l'estimation d'alcoolémie) et position en mode groupe. Utilisée au premier plan uniquement.</li>
+    <li><strong>Microphone :</strong> saisie vocale d'un verre ; l'audio est transcrit puis <strong>non conservé</strong>.</li>
+    <li><strong>Caméra :</strong> scan du QR code pour rejoindre un groupe ; <strong>aucune photo n'est stockée</strong>.</li>
+    <li><strong>Notifications :</strong> alertes de sécurité et rappels de retour.</li>
+  </ul>
+
+  <h2>6. Services tiers (sous-traitants)</h2>
+  <ul>
+    <li><strong>Supabase</strong> — hébergement de la synchro de groupe, dans l'Union européenne (région Central EU, Francfort, Allemagne).</li>
+    <li><strong>Expo</strong> — envoi des notifications push.</li>
+    <li><strong>Sentry</strong> — rapports de plantage anonymisés (si activé).</li>
+    <li><strong>Google Play / Apple</strong> — distribution et reconnaissance vocale système.</li>
+  </ul>
+  <p>Nous ne <strong>vendons</strong> aucune donnée et n'affichons <strong>aucune publicité</strong>.</p>
+
+  <h2>7. Transferts hors UE</h2>
+  <p>Les données de groupe sont hébergées dans l'Union européenne. Certains sous-traitants (Expo, Google, Apple, Sentry) peuvent traiter des données techniques hors de l'UE, sous garanties appropriées (clauses contractuelles types).</p>
+
+  <h2>8. Sécurité</h2>
+  <p>Les échanges avec nos serveurs sont chiffrés (HTTPS). L'accès aux données de groupe est restreint au niveau de la base de données (Row Level Security) : un membre ne voit que les données de son propre groupe.</p>
+
+  <h2>9. Tes droits (RGPD)</h2>
+  <p>Tu disposes d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité.</p>
+  <ul>
+    <li><em>Effacement immédiat :</em> Réglages → Confidentialité → <strong>« Supprimer mes données »</strong> efface ton profil, ton historique et tes données de groupe (sur l'appareil et côté serveur).</li>
+    <li><em>Désinstaller</em> l'application supprime également toutes les données locales.</li>
+    <li>Pour toute demande : <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>. Tu peux aussi saisir la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>).</li>
+  </ul>
+
+  <h2>10. Âge minimum</h2>
+  <p>SoberMate est réservée aux personnes de <strong>18 ans ou plus</strong>.</p>
+
+  <h2>11. Modifications</h2>
+  <p>Cette politique peut évoluer ; la date en tête indique la dernière version.</p>
+
+  <footer>Arnaud Meigné, éditeur indépendant — <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a></footer>
+</article>
+
+<!-- ─────────────── ENGLISH ─────────────── -->
+<article data-lang="en">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 23 June 2026</p>
+
+  <h2>1. Data controller</h2>
+  <p>The SoberMate app is published by <strong>Arnaud Meigné, independent developer</strong>. For any question about your data: <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>.</p>
+
+  <h2>2. Principle: your data stays on your phone</h2>
+  <p>SoberMate is designed to work locally. Your profile (first name, weight, sex, home address, trusted contact), your drink and evening history, and your settings are <strong>stored only on your device</strong> and are <strong>never</strong> sent to our servers.</p>
+
+  <h2>3. Data shared in “group mode” (optional)</h2>
+  <p>When you create or join an evening group, and only for that time, the following information is synchronised through our host Supabase so it is visible to members of your group: <strong>your first name, your estimated blood alcohol level, your GPS location</strong> (if you enable sharing) and your <strong>“got home safe” status</strong>.</p>
+  <ul>
+    <li><em>Purpose:</em> collective safety during the night out (looking out for each other).</li>
+    <li><em>Legal basis:</em> your consent (you choose to join a group and enable location).</li>
+    <li><em>Retention:</em> this data is <strong>deleted when the evening ends</strong>, and automatically after 48 hours at the latest.</li>
+  </ul>
+
+  <h2>4. Anonymous usage statistics</h2>
+  <p>To measure app adoption, we record an <strong>anonymous identifier</strong> (not linked to your identity) and usage dates. No personal data is attached. You can <strong>disable</strong> this tracking at any time in Settings → Privacy.</p>
+
+  <h2>5. Device permissions</h2>
+  <ul>
+    <li><strong>Location:</strong> weather (which refines the BAC estimate) and position in group mode. Used in the foreground only.</li>
+    <li><strong>Microphone:</strong> voice logging of a drink; the audio is transcribed then <strong>not retained</strong>.</li>
+    <li><strong>Camera:</strong> scanning a QR code to join a group; <strong>no photo is stored</strong>.</li>
+    <li><strong>Notifications:</strong> safety alerts and check-in reminders.</li>
+  </ul>
+
+  <h2>6. Third-party services (processors)</h2>
+  <ul>
+    <li><strong>Supabase</strong> — hosting of group sync, in the European Union (Central EU region, Frankfurt, Germany).</li>
+    <li><strong>Expo</strong> — push notification delivery.</li>
+    <li><strong>Sentry</strong> — anonymised crash reports (if enabled).</li>
+    <li><strong>Google Play / Apple</strong> — distribution and system speech recognition.</li>
+  </ul>
+  <p>We <strong>do not sell</strong> any data and show <strong>no advertising</strong>.</p>
+
+  <h2>7. Transfers outside the EU</h2>
+  <p>Group data is hosted in the European Union. Some processors (Expo, Google, Apple, Sentry) may process technical data outside the EU, under appropriate safeguards (standard contractual clauses).</p>
+
+  <h2>8. Security</h2>
+  <p>Exchanges with our servers are encrypted (HTTPS). Access to group data is restricted at the database level (Row Level Security): a member only sees their own group's data.</p>
+
+  <h2>9. Your rights (GDPR)</h2>
+  <p>You have the right to access, rectify, erase, object to and port your data.</p>
+  <ul>
+    <li><em>Immediate erasure:</em> Settings → Privacy → <strong>“Delete my data”</strong> erases your profile, history and group data (on the device and on the server).</li>
+    <li><em>Uninstalling</em> the app also deletes all local data.</li>
+    <li>For any request: <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>. You may also contact your data protection authority.</li>
+  </ul>
+
+  <h2>10. Minimum age</h2>
+  <p>SoberMate is intended for people aged <strong>18 or older</strong>.</p>
+
+  <h2>11. Changes</h2>
+  <p>This policy may change; the date at the top indicates the latest version.</p>
+
+  <footer>Arnaud Meigné, independent developer — <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a></footer>
+</article>
+
+<!-- ─────────────── ESPAÑOL ─────────────── -->
+<article data-lang="es">
+  <h1>Política de privacidad</h1>
+  <p class="updated">Última actualización: 23 de junio de 2026</p>
+
+  <h2>1. Responsable del tratamiento</h2>
+  <p>La aplicación SoberMate está editada por <strong>Arnaud Meigné, desarrollador independiente</strong>. Para cualquier consulta sobre tus datos: <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>.</p>
+
+  <h2>2. Principio: tus datos permanecen en tu teléfono</h2>
+  <p>SoberMate está diseñada para funcionar localmente. Tu perfil (nombre, peso, sexo, dirección de casa, contacto de confianza), tu historial de copas y noches, así como tus ajustes se <strong>almacenan únicamente en tu dispositivo</strong> y <strong>nunca</strong> se envían a nuestros servidores.</p>
+
+  <h2>3. Datos compartidos en el «modo grupo» (opcional)</h2>
+  <p>Cuando creas o te unes a un grupo de noche, y solo durante ese tiempo, la siguiente información se sincroniza a través de nuestro proveedor Supabase para que la vean los miembros de tu grupo: <strong>tu nombre, tu tasa de alcohol estimada, tu posición GPS</strong> (si activas el uso compartido) y tu <strong>estado «he llegado bien»</strong>.</p>
+  <ul>
+    <li><em>Finalidad:</em> seguridad colectiva durante la salida (cuidarse mutuamente).</li>
+    <li><em>Base legal:</em> tu consentimiento (eliges unirte a un grupo y activar la ubicación).</li>
+    <li><em>Conservación:</em> estos datos se <strong>eliminan al cerrar la noche</strong> y, a más tardar, automáticamente tras 48 horas.</li>
+  </ul>
+
+  <h2>4. Estadísticas de uso anónimas</h2>
+  <p>Para medir la adopción de la app, registramos un <strong>identificador anónimo</strong> (no vinculado a tu identidad) y fechas de uso. No se asocia ningún dato personal. Puedes <strong>desactivar</strong> este seguimiento en cualquier momento en Ajustes → Privacidad.</p>
+
+  <h2>5. Permisos del dispositivo</h2>
+  <ul>
+    <li><strong>Ubicación:</strong> clima (que afina la estimación de la tasa) y posición en modo grupo. Solo en primer plano.</li>
+    <li><strong>Micrófono:</strong> registro por voz de una copa; el audio se transcribe y <strong>no se conserva</strong>.</li>
+    <li><strong>Cámara:</strong> escaneo del código QR para unirse a un grupo; <strong>no se guarda ninguna foto</strong>.</li>
+    <li><strong>Notificaciones:</strong> alertas de seguridad y recordatorios de regreso.</li>
+  </ul>
+
+  <h2>6. Servicios de terceros (encargados)</h2>
+  <ul>
+    <li><strong>Supabase</strong> — alojamiento de la sincronización de grupo, en la Unión Europea (región Central EU, Fráncfort, Alemania).</li>
+    <li><strong>Expo</strong> — envío de notificaciones push.</li>
+    <li><strong>Sentry</strong> — informes de fallos anonimizados (si está activado).</li>
+    <li><strong>Google Play / Apple</strong> — distribución y reconocimiento de voz del sistema.</li>
+  </ul>
+  <p>No <strong>vendemos</strong> ningún dato ni mostramos <strong>publicidad</strong>.</p>
+
+  <h2>7. Transferencias fuera de la UE</h2>
+  <p>Los datos de grupo se alojan en la Unión Europea. Algunos encargados (Expo, Google, Apple, Sentry) pueden tratar datos técnicos fuera de la UE, con garantías adecuadas (cláusulas contractuales tipo).</p>
+
+  <h2>8. Seguridad</h2>
+  <p>Los intercambios con nuestros servidores están cifrados (HTTPS). El acceso a los datos de grupo está restringido a nivel de base de datos (Row Level Security): un miembro solo ve los datos de su propio grupo.</p>
+
+  <h2>9. Tus derechos (RGPD)</h2>
+  <p>Tienes derecho de acceso, rectificación, supresión, oposición y portabilidad.</p>
+  <ul>
+    <li><em>Supresión inmediata:</em> Ajustes → Privacidad → <strong>«Eliminar mis datos»</strong> borra tu perfil, historial y datos de grupo (en el dispositivo y en el servidor).</li>
+    <li><em>Desinstalar</em> la app también elimina todos los datos locales.</li>
+    <li>Para cualquier solicitud: <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>. También puedes contactar con tu autoridad de protección de datos.</li>
+  </ul>
+
+  <h2>10. Edad mínima</h2>
+  <p>SoberMate está destinada a personas de <strong>18 años o más</strong>.</p>
+
+  <h2>11. Modificaciones</h2>
+  <p>Esta política puede cambiar; la fecha del encabezado indica la última versión.</p>
+
+  <footer>Arnaud Meigné, desarrollador independiente — <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a></footer>
+</article>
+
+<!-- ─────────────── 中文 ─────────────── -->
+<article data-lang="zh">
+  <h1>隐私政策</h1>
+  <p class="updated">最后更新：2026年6月23日</p>
+
+  <h2>1. 数据控制者</h2>
+  <p>SoberMate 应用由 <strong>Arnaud Meigné（独立开发者）</strong> 发布。有关你数据的任何问题，请联系：<a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>。</p>
+
+  <h2>2. 原则：你的数据保存在手机上</h2>
+  <p>SoberMate 以本地运行为设计宗旨。你的资料（名字、体重、性别、家庭住址、信任联系人）、你的饮酒与聚会历史，以及你的设置都<strong>仅保存在你的设备上</strong>，<strong>绝不</strong>发送到我们的服务器。</p>
+
+  <h2>3. “群组模式”中共享的数据（可选）</h2>
+  <p>当你创建或加入一个聚会群组时，且仅在此期间，以下信息会通过我们的托管服务商 Supabase 同步，以便群组成员可见：<strong>你的名字、你的估算酒精浓度、你的 GPS 位置</strong>（若你开启共享）以及你的<strong>“已平安到家”状态</strong>。</p>
+  <ul>
+    <li><em>目的：</em>聚会期间的集体安全（彼此照应）。</li>
+    <li><em>法律依据：</em>你的同意（你选择加入群组并开启定位）。</li>
+    <li><em>保存期限：</em>这些数据会在<strong>聚会结束时删除</strong>，最迟在 48 小时后自动删除。</li>
+  </ul>
+
+  <h2>4. 匿名使用统计</h2>
+  <p>为衡量应用的使用情况，我们会记录一个<strong>匿名标识符</strong>（不与你的身份关联）以及使用日期，不关联任何个人数据。你可随时在 设置 → 隐私 中<strong>关闭</strong>此统计。</p>
+
+  <h2>5. 设备权限</h2>
+  <ul>
+    <li><strong>定位：</strong>天气（用于优化酒精浓度估算）及群组模式中的位置，仅在前台使用。</li>
+    <li><strong>麦克风：</strong>语音记录饮品；音频转写后<strong>不予保留</strong>。</li>
+    <li><strong>相机：</strong>扫描二维码以加入群组；<strong>不保存任何照片</strong>。</li>
+    <li><strong>通知：</strong>安全提醒与回家确认提醒。</li>
+  </ul>
+
+  <h2>6. 第三方服务（受托处理方）</h2>
+  <ul>
+    <li><strong>Supabase</strong> — 群组同步的托管，位于欧盟（Central EU 区域，德国法兰克福）。</li>
+    <li><strong>Expo</strong> — 推送通知的发送。</li>
+    <li><strong>Sentry</strong> — 匿名化的崩溃报告（如启用）。</li>
+    <li><strong>Google Play / Apple</strong> — 分发与系统语音识别。</li>
+  </ul>
+  <p>我们<strong>不出售</strong>任何数据，也<strong>不展示广告</strong>。</p>
+
+  <h2>7. 欧盟以外的传输</h2>
+  <p>群组数据托管在欧盟境内。部分受托处理方（Expo、Google、Apple、Sentry）可能在欧盟以外处理技术数据，并采取适当的保障措施（标准合同条款）。</p>
+
+  <h2>8. 安全</h2>
+  <p>与我们服务器的通信均加密（HTTPS）。群组数据的访问在数据库层面受到限制（行级安全 RLS）：成员只能看到自己所在群组的数据。</p>
+
+  <h2>9. 你的权利（GDPR）</h2>
+  <p>你享有访问、更正、删除、反对及可携带的权利。</p>
+  <ul>
+    <li><em>立即删除：</em>设置 → 隐私 → <strong>“删除我的数据”</strong> 将清除你的资料、历史记录和群组数据（设备端与服务器端）。</li>
+    <li><em>卸载</em>应用也会删除所有本地数据。</li>
+    <li>如需任何请求：<a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>。你也可联系所在地的数据保护机构。</li>
+  </ul>
+
+  <h2>10. 最低年龄</h2>
+  <p>SoberMate 仅面向 <strong>18 岁及以上</strong> 人士。</p>
+
+  <h2>11. 变更</h2>
+  <p>本政策可能更新；顶部日期表示最新版本。</p>
+
+  <footer>Arnaud Meigné（独立开发者）— <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a></footer>
+</article>
+
+<script>
+  (function () {
+    var supported = ['fr','en','es','zh'];
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.langs button'));
+    var arts = Array.prototype.slice.call(document.querySelectorAll('article'));
+    function show(lang) {
+      if (supported.indexOf(lang) === -1) lang = 'fr';
+      document.documentElement.lang = lang;
+      arts.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-lang') === lang); });
+      btns.forEach(function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-lang') === lang)); });
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-lang')); }); });
+    // Langue par défaut : celle du navigateur, sinon français.
+    show((navigator.language || 'fr').slice(0, 2).toLowerCase());
+  })();
+</script>
+</body>
+</html>
