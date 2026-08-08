@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assistance — SoberMate</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1a2330; --muted:#5b6b7d; --accent:#0A4FA6; --line:#e2e8f0; }
+  * { box-sizing:border-box; }
+  body { font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--fg);
+         background:var(--bg); max-width:760px; margin:0 auto; padding:24px 20px 64px; line-height:1.62; }
+  header { display:flex; align-items:center; gap:12px; margin-bottom:4px; }
+  header .mark { line-height:0; display:inline-flex; }
+  h1 { font-size:24px; margin:0; }
+  .updated { color:var(--muted); font-size:13px; margin:2px 0 18px; }
+  .langs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+  .langs button { border:1px solid var(--line); background:#f8fafc; color:var(--fg); border-radius:8px;
+                  padding:7px 12px; font-size:14px; cursor:pointer; }
+  .langs button[aria-selected="true"] { background:var(--accent); color:#fff; border-color:var(--accent); }
+  article { display:none; }
+  article.active { display:block; }
+  h2 { font-size:17px; margin:26px 0 6px; }
+  h3 { font-size:15px; margin:18px 0 2px; }
+  p, li { font-size:15px; }
+  a { color:var(--accent); }
+  .note { background:#f1f5f9; border:1px solid var(--line); border-radius:10px; padding:12px 14px; font-size:14px; }
+  /* Bandeau d'urgence : une app liée à l'alcool doit dire d'emblée qu'elle ne remplace
+     pas les secours. Seul ajout à la charte de privacy.html. */
+  .note.urgent { background:#fef2f2; border-color:#fecaca; }
+  .contact { background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px 16px; font-size:15px; }
+  .contact a { font-weight:600; }
+  footer { margin-top:36px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<header><span class="mark" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="shield" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5CC8F5"/><stop offset="1" stop-color="#0A4FA6"/></linearGradient><clipPath id="shieldClip"><path d="M50 18 L76 27 C78 28 79 30 79 33 L79 52 C79 68 66 80 50 86 C34 80 21 68 21 52 L21 33 C21 30 22 28 24 27 Z"/></clipPath></defs><path d="M50 18 L76 27 C78 28 79 30 79 33 L79 52 C79 68 66 80 50 86 C34 80 21 68 21 52 L21 33 C21 30 22 28 24 27 Z" fill="url(#shield)"/><g clip-path="url(#shieldClip)"><path d="M21 60 Q35 54 50 60 T79 60 L79 90 L21 90 Z" fill="#34D6E0" opacity="0.92"/></g><path d="M50 30 C56 40 59 45 59 49 A9 9 0 1 1 41 49 C41 45 44 40 50 30 Z" fill="#FFFFFF" opacity="0.95"/></svg></span><h1>SoberMate</h1></header>
+<div class="langs" role="tablist" aria-label="Langue / Language">
+  <button data-lang="fr" role="tab">Français</button>
+  <button data-lang="en" role="tab">English</button>
+  <button data-lang="es" role="tab">Español</button>
+  <button data-lang="it" role="tab">Italiano</button>
+  <button data-lang="zh" role="tab">中文</button>
+</div>
+
+<!-- ─────────────── FRANÇAIS ─────────────── -->
+<article data-lang="fr">
+  <h1>Assistance</h1>
+  <p class="updated">Dernière mise à jour : 8 août 2026</p>
+
+  <p class="contact">Une question, un bug, une demande sur tes données ? Écris à
+    <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>.</p>
+
+  <p class="note urgent">🚨 <strong>SoberMate n'est pas un service d'urgence.</strong> En cas de malaise, de perte
+    de connaissance ou de doute sur l'état d'une personne, appelle immédiatement le <strong>15</strong> (SAMU)
+    ou le <strong>112</strong> (numéro d'urgence européen).</p>
+
+  <h2>Questions fréquentes</h2>
+
+  <h3>L'alcoolémie affichée est-elle exacte ?</h3>
+  <p>Non : c'est une <strong>estimation</strong>, calculée à partir de ce que tu déclares — verres, heures, poids,
+    sexe, taille, repas. Elle peut s'écarter sensiblement de ton alcoolémie réelle : la fatigue, les médicaments,
+    l'état de santé et les variations individuelles ne sont pas mesurables par une application. C'est pourquoi
+    l'app affiche une <strong>fourchette</strong> plutôt qu'un chiffre unique.</p>
+
+  <h3>Puis-je m'en servir pour savoir si je peux conduire ?</h3>
+  <p>Non. SoberMate n'est <strong>ni un éthylotest, ni un dispositif médical ou légal</strong>, et ne peut pas
+    déterminer ton aptitude à conduire. Après avoir bu, ne conduis pas.</p>
+
+  <h3>Comment rejoindre le groupe d'un ami ?</h3>
+  <p>Écran <strong>Ce soir</strong> → icône <strong>Groupe</strong> en haut. Scanne le QR code affiché sur le
+    téléphone de la personne qui a créé le groupe, ou saisis son code à 8 caractères. Un lien d'invitation
+    partagé fonctionne également.</p>
+
+  <h3>Mes données sont-elles envoyées quelque part ?</h3>
+  <p>En usage individuel, non : tout reste sur ton téléphone. Des données ne quittent l'appareil que si tu
+    actives le <strong>mode groupe</strong> ou la <strong>localisation</strong>, et les données de groupe sont
+    supprimées à la clôture de la soirée. Le détail est dans la
+    <a href="privacy.html">politique de confidentialité</a>.</p>
+
+  <h3>Comment changer de téléphone sans perdre mon historique ?</h3>
+  <p><strong>Réglages → Confidentialité → « Exporter mes données »</strong>. La sauvegarde est copiée dans le
+    presse-papiers, prête à être partagée (envoie-la-toi par mail ou message). Sur le nouveau téléphone, copie ce
+    contenu puis choisis <strong>« Importer une sauvegarde »</strong>. Attention : l'import <strong>remplace</strong>
+    les données présentes sur l'appareil.</p>
+
+  <h3>Comment supprimer mes données ?</h3>
+  <p><strong>Réglages → Confidentialité → « Supprimer mes données »</strong> efface ton profil, ton historique et
+    tes données de groupe, sur l'appareil <strong>et</strong> côté serveur. Quitter un groupe suffit à supprimer
+    ce que tu y avais partagé. Tu peux aussi en faire la demande par e-mail.</p>
+
+  <h3>Je ne reçois pas les notifications.</h3>
+  <p>Vérifie que les notifications sont autorisées pour SoberMate dans les réglages de ton téléphone, et que le
+    mode Concentration / Ne pas déranger est désactivé.</p>
+
+  <h2>Signaler un problème</h2>
+  <p>Pour un traitement plus rapide, précise le <strong>modèle de ton téléphone</strong>, le <strong>système</strong>
+    (iOS ou Android) et <strong>ce que tu faisais</strong> au moment du problème. Une capture d'écran aide beaucoup.</p>
+
+  <h2>Bon à savoir</h2>
+  <p>SoberMate est réservée aux personnes de <strong>18 ans et plus</strong>. L'application ne se substitue à aucun
+    avis médical et n'encourage pas la consommation d'alcool.</p>
+
+  <footer>Arnaud Meigné, éditeur indépendant — <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>
+    — <a href="privacy.html">Politique de confidentialité</a></footer>
+</article>
+
+<!-- ─────────────── ENGLISH ─────────────── -->
+<article data-lang="en">
+  <h1>Support</h1>
+  <p class="updated">Last updated: 8 August 2026</p>
+
+  <p class="contact">A question, a bug, a request about your data? Write to
+    <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>.</p>
+
+  <p class="note urgent">🚨 <strong>SoberMate is not an emergency service.</strong> If someone feels unwell, loses
+    consciousness, or you have any doubt about their condition, call your local emergency number immediately —
+    <strong>112</strong> (Europe), <strong>911</strong> (US / Canada).</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>Is the displayed blood alcohol level accurate?</h3>
+  <p>No — it is an <strong>estimate</strong>, computed from what you declare: drinks, times, weight, sex, height,
+    meals. It can differ significantly from your actual blood alcohol level: tiredness, medication, health
+    conditions and individual variation cannot be measured by an app. That is why the app shows a
+    <strong>range</strong> rather than a single figure.</p>
+
+  <h3>Can I use it to decide whether I can drive?</h3>
+  <p>No. SoberMate is <strong>not a breathalyser, nor a medical or legal device</strong>, and cannot determine your
+    fitness to drive. After drinking, do not drive.</p>
+
+  <h3>How do I join a friend's group?</h3>
+  <p><strong>Tonight</strong> screen → <strong>Group</strong> icon at the top. Scan the QR code shown on the phone
+    of whoever created the group, or enter their 8-character code. A shared invitation link works too.</p>
+
+  <h3>Is my data sent anywhere?</h3>
+  <p>In individual use, no: everything stays on your phone. Data leaves your device only if you enable
+    <strong>group mode</strong> or <strong>location</strong>, and group data is deleted when the evening ends.
+    Full details in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>How do I switch phones without losing my history?</h3>
+  <p><strong>Settings → Privacy → “Export my data”</strong>. The backup is copied to your clipboard, ready to share
+    (email or message it to yourself). On the new phone, copy that content and choose
+    <strong>“Import a backup”</strong>. Note: importing <strong>replaces</strong> the data currently on the device.</p>
+
+  <h3>How do I delete my data?</h3>
+  <p><strong>Settings → Privacy → “Delete my data”</strong> erases your profile, your history and your group data,
+    both on the device <strong>and</strong> on the server. Leaving a group is enough to delete what you had shared
+    there. You can also request deletion by email.</p>
+
+  <h3>I'm not receiving notifications.</h3>
+  <p>Check that notifications are allowed for SoberMate in your phone's settings, and that Focus / Do Not Disturb
+    is off.</p>
+
+  <h2>Reporting a problem</h2>
+  <p>To speed things up, include your <strong>phone model</strong>, your <strong>operating system</strong> (iOS or
+    Android) and <strong>what you were doing</strong> when the problem occurred. A screenshot helps a lot.</p>
+
+  <h2>Good to know</h2>
+  <p>SoberMate is for people <strong>18 and older</strong> only. The app is not a substitute for medical advice and
+    does not encourage drinking.</p>
+
+  <footer>Arnaud Meigné, independent developer — <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>
+    — <a href="privacy.html">Privacy policy</a></footer>
+</article>
+
+<!-- ─────────────── ESPAÑOL ─────────────── -->
+<article data-lang="es">
+  <h1>Ayuda</h1>
+  <p class="updated">Última actualización: 8 de agosto de 2026</p>
+
+  <p class="contact">¿Una pregunta, un error, una solicitud sobre tus datos? Escribe a
+    <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>.</p>
+
+  <p class="note urgent">🚨 <strong>SoberMate no es un servicio de emergencia.</strong> Si alguien se encuentra mal,
+    pierde el conocimiento o tienes cualquier duda sobre su estado, llama de inmediato al número de emergencias
+    local — <strong>112</strong> (España y Unión Europea).</p>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <h3>¿La alcoholemia que se muestra es exacta?</h3>
+  <p>No: es una <strong>estimación</strong>, calculada a partir de lo que declaras — copas, horas, peso, sexo,
+    altura, comidas. Puede alejarse bastante de tu alcoholemia real: el cansancio, los medicamentos, el estado de
+    salud y las variaciones individuales no se pueden medir con una aplicación. Por eso la app muestra un
+    <strong>intervalo</strong> y no una cifra única.</p>
+
+  <h3>¿Puedo usarla para saber si puedo conducir?</h3>
+  <p>No. SoberMate <strong>no es un alcoholímetro, ni un dispositivo médico o legal</strong>, y no puede determinar
+    tu aptitud para conducir. Después de beber, no conduzcas.</p>
+
+  <h3>¿Cómo me uno al grupo de un amigo?</h3>
+  <p>Pantalla <strong>Esta noche</strong> → icono <strong>Grupo</strong> arriba. Escanea el código QR que aparece en
+    el teléfono de quien creó el grupo, o introduce su código de 8 caracteres. Un enlace de invitación compartido
+    también funciona.</p>
+
+  <h3>¿Se envían mis datos a alguna parte?</h3>
+  <p>En uso individual, no: todo se queda en tu teléfono. Los datos solo salen del dispositivo si activas el
+    <strong>modo grupo</strong> o la <strong>ubicación</strong>, y los datos de grupo se eliminan al cerrar la noche.
+    Todos los detalles en la <a href="privacy.html">política de privacidad</a>.</p>
+
+  <h3>¿Cómo cambio de teléfono sin perder mi historial?</h3>
+  <p><strong>Ajustes → Privacidad → «Exportar mis datos»</strong>. La copia de seguridad se guarda en el portapapeles,
+    lista para compartir (envíatela por correo o mensaje). En el teléfono nuevo, copia ese contenido y elige
+    <strong>«Importar una copia de seguridad»</strong>. Atención: importar <strong>sustituye</strong> los datos que
+    haya en el dispositivo.</p>
+
+  <h3>¿Cómo elimino mis datos?</h3>
+  <p><strong>Ajustes → Privacidad → «Eliminar mis datos»</strong> borra tu perfil, tu historial y tus datos de grupo,
+    tanto en el dispositivo <strong>como</strong> en el servidor. Salir de un grupo basta para eliminar lo que
+    hubieras compartido allí. También puedes solicitarlo por correo.</p>
+
+  <h3>No recibo las notificaciones.</h3>
+  <p>Comprueba que las notificaciones estén permitidas para SoberMate en los ajustes de tu teléfono, y que el modo
+    Concentración / No molestar esté desactivado.</p>
+
+  <h2>Informar de un problema</h2>
+  <p>Para agilizarlo, indica el <strong>modelo de tu teléfono</strong>, el <strong>sistema</strong> (iOS o Android) y
+    <strong>qué estabas haciendo</strong> cuando ocurrió. Una captura de pantalla ayuda mucho.</p>
+
+  <h2>Conviene saber</h2>
+  <p>SoberMate está reservada a personas de <strong>18 años o más</strong>. La aplicación no sustituye ningún consejo
+    médico y no fomenta el consumo de alcohol.</p>
+
+  <footer>Arnaud Meigné, desarrollador independiente —
+    <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>
+    — <a href="privacy.html">Política de privacidad</a></footer>
+</article>
+
+<!-- ─────────────── ITALIANO ─────────────── -->
+<article data-lang="it">
+  <h1>Assistenza</h1>
+  <p class="updated">Ultimo aggiornamento: 8 agosto 2026</p>
+
+  <p class="contact">Una domanda, un problema, una richiesta sui tuoi dati? Scrivi a
+    <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>.</p>
+
+  <p class="note urgent">🚨 <strong>SoberMate non è un servizio di emergenza.</strong> Se qualcuno si sente male,
+    perde conoscenza o hai un qualsiasi dubbio sulle sue condizioni, chiama subito il numero di emergenza —
+    <strong>112</strong> (numero unico europeo) o <strong>118</strong> (emergenza sanitaria in Italia).</p>
+
+  <h2>Domande frequenti</h2>
+
+  <h3>Il tasso alcolemico mostrato è esatto?</h3>
+  <p>No: è una <strong>stima</strong>, calcolata da quanto dichiari — bicchieri, orari, peso, sesso, altezza, pasti.
+    Può discostarsi sensibilmente dal tuo tasso reale: stanchezza, farmaci, condizioni di salute e variazioni
+    individuali non sono misurabili da un'app. Per questo l'app mostra un <strong>intervallo</strong> e non un
+    valore unico.</p>
+
+  <h3>Posso usarla per sapere se posso guidare?</h3>
+  <p>No. SoberMate <strong>non è un etilotest, né un dispositivo medico o legale</strong>, e non può determinare la
+    tua idoneità alla guida. Dopo aver bevuto, non guidare.</p>
+
+  <h3>Come entro nel gruppo di un amico?</h3>
+  <p>Schermata <strong>Stasera</strong> → icona <strong>Gruppo</strong> in alto. Inquadra il codice QR mostrato sul
+    telefono di chi ha creato il gruppo, oppure inserisci il suo codice di 8 caratteri. Funziona anche un link di
+    invito condiviso.</p>
+
+  <h3>I miei dati vengono inviati da qualche parte?</h3>
+  <p>Nell'uso individuale no: resta tutto sul tuo telefono. I dati escono dal dispositivo solo se attivi la
+    <strong>modalità gruppo</strong> o la <strong>posizione</strong>, e i dati di gruppo vengono eliminati alla
+    chiusura della serata. Tutti i dettagli nell'<a href="privacy.html">informativa sulla privacy</a>.</p>
+
+  <h3>Come cambio telefono senza perdere lo storico?</h3>
+  <p><strong>Impostazioni → Privacy → «Esporta i miei dati»</strong>. Il backup viene copiato negli appunti, pronto
+    da condividere (inviatelo via mail o messaggio). Sul nuovo telefono, copia quel contenuto e scegli
+    <strong>«Importa un backup»</strong>. Attenzione: l'importazione <strong>sostituisce</strong> i dati presenti
+    sul dispositivo.</p>
+
+  <h3>Come elimino i miei dati?</h3>
+  <p><strong>Impostazioni → Privacy → «Elimina i miei dati»</strong> cancella profilo, storico e dati di gruppo, sul
+    dispositivo <strong>e</strong> sul server. Uscire da un gruppo basta a eliminare ciò che vi avevi condiviso.
+    Puoi anche farne richiesta via e-mail.</p>
+
+  <h3>Non ricevo le notifiche.</h3>
+  <p>Verifica che le notifiche siano consentite per SoberMate nelle impostazioni del telefono e che la modalità
+    Full Immersion / Non disturbare sia disattivata.</p>
+
+  <h2>Segnalare un problema</h2>
+  <p>Per accelerare, indica il <strong>modello del telefono</strong>, il <strong>sistema</strong> (iOS o Android) e
+    <strong>cosa stavi facendo</strong> quando è successo. Uno screenshot aiuta molto.</p>
+
+  <h2>Da sapere</h2>
+  <p>SoberMate è riservata alle persone di <strong>18 anni o più</strong>. L'applicazione non sostituisce alcun
+    parere medico e non incoraggia il consumo di alcol.</p>
+
+  <footer>Arnaud Meigné, sviluppatore indipendente —
+    <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>
+    — <a href="privacy.html">Informativa sulla privacy</a></footer>
+</article>
+
+<!-- ─────────────── 中文 ─────────────── -->
+<article data-lang="zh">
+  <h1>帮助与支持</h1>
+  <p class="updated">最后更新：2026 年 8 月 8 日</p>
+
+  <p class="contact">有疑问、发现问题，或想处理你的数据？请发送邮件至
+    <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>。</p>
+
+  <p class="note urgent">🚨 <strong>SoberMate 不是急救服务。</strong>如果有人身体不适、失去意识，或你对其状况有任何疑虑，
+    请立即拨打当地急救电话 —— <strong>120</strong>（中国大陆）、<strong>112</strong>（欧洲）、<strong>911</strong>（美国／加拿大）。</p>
+
+  <h2>常见问题</h2>
+
+  <h3>显示的酒精浓度准确吗？</h3>
+  <p>不准确：这是<strong>估算值</strong>，依据你所填写的内容计算 —— 饮酒杯数、时间、体重、性别、身高、进餐情况。
+    它可能与你的实际酒精浓度有明显偏差：疲劳、药物、健康状况和个体差异都无法由应用测量。
+    因此应用显示的是一个<strong>区间</strong>，而不是单一数值。</p>
+
+  <h3>我可以用它判断自己能否开车吗？</h3>
+  <p>不可以。SoberMate <strong>既不是酒精测试仪，也不是医疗或法律设备</strong>，无法判定你是否适合驾驶。饮酒后请勿驾车。</p>
+
+  <h3>如何加入朋友的群组？</h3>
+  <p><strong>今晚</strong>页面 → 顶部的<strong>群组</strong>图标。扫描创建群组者手机上显示的二维码，
+    或输入其 8 位字符代码。分享的邀请链接同样有效。</p>
+
+  <h3>我的数据会被发送到别处吗？</h3>
+  <p>个人使用时不会：所有数据都保留在你的手机上。只有当你启用<strong>群组模式</strong>或<strong>定位</strong>时，
+    数据才会离开设备；群组数据在聚会结束时删除。详情见<a href="privacy.html">隐私政策</a>。</p>
+
+  <h3>如何更换手机而不丢失记录？</h3>
+  <p><strong>设置 → 隐私 →「导出我的数据」</strong>。备份会复制到剪贴板，可直接分享（用邮件或消息发送给自己）。
+    在新手机上复制该内容，然后选择<strong>「导入备份」</strong>。注意：导入会<strong>覆盖</strong>设备上现有的数据。</p>
+
+  <h3>如何删除我的数据？</h3>
+  <p><strong>设置 → 隐私 →「删除我的数据」</strong>会清除你的个人资料、历史记录和群组数据，
+    同时删除设备<strong>和</strong>服务器上的内容。退出群组即可删除你在其中分享过的信息。你也可以通过邮件提出请求。</p>
+
+  <h3>我收不到通知。</h3>
+  <p>请检查手机设置中是否已允许 SoberMate 发送通知，并确认专注模式／勿扰模式已关闭。</p>
+
+  <h2>报告问题</h2>
+  <p>为了更快处理，请注明<strong>手机型号</strong>、<strong>操作系统</strong>（iOS 或 Android），
+    以及问题发生时<strong>你正在做什么</strong>。附上截图会很有帮助。</p>
+
+  <h2>须知</h2>
+  <p>SoberMate 仅面向 <strong>18 周岁及以上</strong>人士。本应用不能替代任何医疗建议，也不鼓励饮酒。</p>
+
+  <footer>Arnaud Meigné（独立开发者）—
+    <a href="mailto:mysobermateapp@gmail.com">mysobermateapp@gmail.com</a>
+    — <a href="privacy.html">隐私政策</a></footer>
+</article>
+
+<script>
+  (function () {
+    // Doit refléter SUPPORTED_LOCALES côté app (src/i18n.tsx) : une langue proposée dans
+    // l'app dont la page ne connaîtrait pas le code retomberait silencieusement en français.
+    var supported = ['fr','en','es','it','zh'];
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.langs button'));
+    var arts = Array.prototype.slice.call(document.querySelectorAll('article'));
+    function show(lang) {
+      if (supported.indexOf(lang) === -1) lang = 'fr';
+      document.documentElement.lang = lang;
+      arts.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-lang') === lang); });
+      btns.forEach(function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-lang') === lang)); });
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-lang')); }); });
+    // Langue par défaut : celle du navigateur, sinon français.
+    show((navigator.language || 'fr').slice(0, 2).toLowerCase());
+  })();
+</script>
+</body>
+</html>
