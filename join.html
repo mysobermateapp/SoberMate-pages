@@ -118,13 +118,37 @@
     var $ = function (id) { return document.getElementById(id); };
     if (code) $('code').innerHTML = 'Code : <b>' + code + '</b>';
 
-    // Le bouton tente D'ABORD l'app installée, puis bascule vers le store. Plus
-    // de redirection AUTOMATIQUE : elle expédiait le visiteur au store avant même
-    // qu'il ait rien vu — c'est exactement ce que cette page corrige.
+    // ── Bascule vers le store, ANNULABLE ───────────────────────────────────
+    // Le bouton tente D'ABORD l'app installée, puis bascule vers le store si rien
+    // ne s'est passé. Plus de redirection AUTOMATIQUE à l'arrivée : elle expédiait
+    // le visiteur au store avant même qu'il ait rien vu.
+    //
+    // ⚠️ L'ANNULATION EST ESSENTIELLE, et c'est ce qui manquait. Avant, le saut vers
+    // le store partait INCONDITIONNELLEMENT après 1,2 s — y compris quand l'app venait
+    // de s'ouvrir. L'onglet, passé en arrière-plan, atterrissait donc sur la fiche Play
+    // Store ; l'invité qui y revenait tapait « Ouvrir », l'app démarrait alors depuis
+    // le LANCEUR, sans aucune donnée de lien… et s'ouvrait sur le Dashboard, sans la
+    // moindre trace de l'invitation. Exactement le symptôme remonté en test.
+    //
+    // Une page qui devient masquée = l'app a pris la main. On annule alors le saut.
+    // Trois signaux plutôt qu'un, leur fiabilité variant selon les navigateurs Android.
+    var storeTimer = null;
+    function cancelStoreHop() {
+      if (storeTimer) { clearTimeout(storeTimer); storeTimer = null; }
+    }
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) cancelStoreHop();
+    });
+    window.addEventListener('pagehide', cancelStoreHop);
+    window.addEventListener('blur', cancelStoreHop);
+
     $('store').addEventListener('click', function (e) {
       e.preventDefault();
-      if (deepLink) location.href = deepLink;
-      setTimeout(function () { location.href = store; }, 1200);
+      if (!deepLink) { location.href = store; return; }
+      location.href = deepLink;
+      // 2,5 s : le temps qu'Android affiche sa boîte « ouvrir avec » et que l'app
+      // démarre sur un téléphone lent. 1,2 s coupait ce délai en deux.
+      storeTimer = setTimeout(function () { storeTimer = null; location.href = store; }, 2500);
     });
 
     // Tentative silencieuse à l'arrivée : si l'app est installée, elle s'ouvre et
